@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
   ┌─────────────────────────────────────────────────────────────┐
-  │  PORTFÓLIO — Bruno Ribeiro dos Santos                       │
+  │  PORTFÓLIO — Bruno Ribeiro dos Santos                        │
   │                                                             │
   │  RODAR LOCAL: duplo clique neste arquivo. Abre no navegador. │
   │  (Precisa de internet só pra carregar as fontes.)           │
@@ -140,6 +140,28 @@
   .chips{display:flex;flex-wrap:wrap;gap:7px;position:relative}
   .chip{font-family:var(--mono);font-size:11px;color:#9fb0c8;border:1px solid var(--line);border-radius:7px;padding:4px 9px;background:rgba(255,255,255,.02)}
 
+  /* ponte ERP + dados */
+  .bridge{padding:110px 0 0;position:relative}
+  .bridge-box{background:linear-gradient(180deg,rgba(124,92,255,.06),transparent);border:1px solid var(--line);border-radius:22px;padding:40px;position:relative;overflow:hidden}
+  .bridge-box::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 50% -10%,rgba(124,92,255,.14),transparent 60%);pointer-events:none}
+  .bridge-cols{display:grid;grid-template-columns:1fr auto 1fr;gap:34px;align-items:stretch;position:relative}
+  @media(max-width:820px){.bridge-cols{grid-template-columns:1fr;gap:16px}}
+  .bcol{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px}
+  .bcol .btop{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .bcol .bico{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;font-family:var(--mono);font-weight:700;font-size:15px;color:#fff}
+  .bcol.left .bico{background:linear-gradient(150deg,#570BAC,#7C5CFF)}
+  .bcol.right .bico{background:linear-gradient(150deg,#7C5CFF,#26AEA4)}
+  .bcol h3{font-size:1.15rem;font-weight:600;line-height:1.2}
+  .bcol .bsub{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+  .bchips{display:flex;flex-wrap:wrap;gap:7px}
+  .bchip{font-family:var(--mono);font-size:11.5px;color:#9fb0c8;border:1px solid var(--line);border-radius:7px;padding:5px 10px;background:rgba(255,255,255,.02)}
+  .bmid{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--cyan)}
+  @media(max-width:820px){.bmid{flex-direction:row}}
+  .bmid .barrow{font-size:26px;line-height:1}
+  .bmid .blbl{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg)}
+  @media(max-width:820px){.bmid .blbl{writing-mode:horizontal-tb;transform:none}}
+  .bridge-tail{margin-top:26px;text-align:center;font-size:1.05rem;color:#c8cedb;position:relative}
+  .bridge-tail b{color:var(--text);font-weight:600}
   /* faixa em ação */
   .band{position:relative;width:100vw;left:50%;transform:translateX(-50%);min-height:76vh;display:flex;align-items:center;
     background-size:cover;background-position:62% center;margin:20px 0;overflow:hidden;isolation:isolate}
@@ -229,6 +251,13 @@
   .lb-close{position:absolute;top:20px;right:26px;width:44px;height:44px;border-radius:11px;border:1px solid var(--line);
     background:rgba(255,255,255,.04);color:var(--text);font-size:19px;cursor:pointer;display:grid;place-items:center}
   .lb-close:hover{background:rgba(255,255,255,.08)}
+  .pains-intro{font-family:var(--mono);font-size:14px;letter-spacing:.04em;color:var(--cyan);margin-bottom:18px}
+  .pains{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:58px}
+  @media(max-width:680px){.pains{grid-template-columns:1fr}}
+  .pain{display:flex;gap:13px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;transition:border-color .25s}
+  .pain:hover{border-color:#2b3150}
+  .pain .q{color:var(--violet);font-family:var(--mono);font-weight:700;font-size:19px;line-height:1.35;flex-shrink:0}
+  .pain p{color:#c3c9d6;font-size:1rem;font-style:italic;line-height:1.5}
   .reveal{opacity:0;transform:translateY(42px) scale(.975);filter:blur(6px);transition:opacity .85s cubic-bezier(.16,.8,.24,1),transform .85s cubic-bezier(.16,.8,.24,1),filter .85s ease}
   .reveal.in{opacity:1;transform:none;filter:none}
   :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
@@ -259,9 +288,9 @@
       <span class="l2 decode" data-text="DOS SANTOS">DOS SANTOS</span>
     </h1>
     <div class="role">
-      <b>Consultor de Tecnologia</b><span>/</span><b>ERP Senior</b><span>/</span><b>Business Intelligence</b><span>/</span><b>Engenharia de Dados</b>
+      <b>Consultor ERP Senior</b><span>+</span><b>Business Intelligence</b><span>+</span><b>Engenharia de Dados</b>
     </div>
-    <p class="lead">Empresa nenhuma sofre por falta de dado — sofre por dado espalhado, manual e sem confiança. Eu estruturo, integro e transformo esse dado em painel claro e decisão rápida. Do banco de dados ao insight que a diretoria usa.</p>
+    <p class="lead">Implanto e sustento o ERP Senior Sapiens e também faço o dado dele virar decisão. Requisitos, customização em LSP, migração e go live de um lado; Python, banco e Power BI do outro. Duas frentes que a maioria não junta — e eu entrego nas duas.</p>
     <div class="cta-row">
       <a href="#work" class="btn primary">Ver projetos →</a>
       <a href="#contact" class="btn ghost">Fale comigo</a>
@@ -279,34 +308,67 @@
 </div>
 
 <div class="wrap">
+  <section class="bridge">
+    <div class="eyebrow reveal">O meu diferencial</div>
+    <h2 class="reveal">ERP Senior + Dados: a ponte que quase ninguém faz.</h2>
+    <p class="sec-lead reveal">Cada lado já é um trabalho completo: sou Consultor de Implantação ERP Senior e também profissional de BI e Engenharia de Dados. A diferença é que faço os dois — e sei ligar um no outro. Você me contrata pra qualquer uma das frentes, ou pra ponte entre elas.</p>
+    <div class="bridge-box reveal">
+      <div class="bridge-cols">
+        <div class="bcol left">
+          <div class="btop"><span class="bico">S</span><div><h3>Consultoria ERP Senior</h3><div class="bsub">Implantação · customização · sustentação</div></div></div>
+          <div class="bchips">
+            <span class="bchip">Sapiens</span><span class="bchip">Financeiro</span><span class="bchip">Suprimentos</span><span class="bchip">Mercado</span><span class="bchip">LSP</span><span class="bchip">WebServices</span><span class="bchip">BPM</span><span class="bchip">eDocs</span><span class="bchip">WMS</span><span class="bchip">Analytics Senior X</span><span class="bchip">Switch X</span><span class="bchip">Migração &amp; Go Live</span>
+          </div>
+        </div>
+        <div class="bmid"><span class="blbl">conecto</span><span class="barrow">&rarr;</span></div>
+        <div class="bcol right">
+          <div class="btop"><span class="bico">{ }</span><div><h3>BI &amp; Engenharia de Dados</h3><div class="bsub">Do dado bruto à decisão</div></div></div>
+          <div class="bchips">
+            <span class="bchip">Python</span><span class="bchip">ETL</span><span class="bchip">APIs REST/SOAP</span><span class="bchip">Oracle</span><span class="bchip">PostgreSQL</span><span class="bchip">SQL Server</span><span class="bchip">Data Warehouse</span><span class="bchip">Power BI</span><span class="bchip">DAX</span><span class="bchip">Power Query</span><span class="bchip">Dashboards Executivos</span>
+          </div>
+        </div>
+      </div>
+      <div class="bridge-tail">Implantação de ERP, projeto de dados, ou a ponte entre os dois: <b>uma pessoa só, ponta a ponta.</b></div>
+    </div>
+  </section>
+
   <!-- ÁREAS DE ATUAÇÃO -->
   <section id="exp">
     <div class="eyebrow reveal">Áreas de atuação</div>
-    <h2 class="reveal">O problema raramente é o dado.<br>É o que falta entre ele e a decisão.</h2>
-    <p class="sec-lead reveal">É esse meio que eu construo: estruturo a origem, integro as fontes, automatizo o que é repetitivo e entrego a informação pronta para quem decide — em ERP, banco de dados e Power BI.</p>
+    <h2 class="reveal">O que eu faço, na prática.</h2>
+    <p class="sec-lead reveal">Não é uma coisa só. Dependendo da empresa, o gargalo está no ERP, na integração dos dados, no relatório ou na falta de automação. Costumo mexer nos quatro.</p>
+    <div class="pains-intro reveal">Se algum destes soa familiar, é o que eu resolvo</div>
+    <div class="pains">
+      <div class="pain reveal"><span class="q">&rsaquo;</span><p>"Meus dados estão em vários sistemas e nunca batem."</p></div>
+      <div class="pain reveal"><span class="q">&rsaquo;</span><p>"Fecho o mês exportando planilha no braço."</p></div>
+      <div class="pain reveal"><span class="q">&rsaquo;</span><p>"O ERP tem o dado, mas ninguém consegue tirar relatório dele."</p></div>
+      <div class="pain reveal"><span class="q">&rsaquo;</span><p>"Tenho relatório, mas ninguém confia no número."</p></div>
+      <div class="pain reveal"><span class="q">&rsaquo;</span><p>"Perco horas montando o mesmo indicador toda semana."</p></div>
+      <div class="pain reveal"><span class="q">&rsaquo;</span><p>"Meu dashboard é bonito, mas não me ajuda a decidir."</p></div>
+    </div>
     <div class="exp-grid">
       <div class="exp reveal">
         <div class="badge">S</div>
         <h3>ERP Senior</h3>
-        <p>O ERP guarda o dado; nem sempre entrega a informação. Implanto, customizo e conecto o Senior Sapiens ao resto da operação — do levantamento de requisito ao go live — para cada módulo refletir o processo real da empresa, não o contrário.</p>
+        <p>Implanto e ajusto o Senior Sapiens pra ele acompanhar o processo real da empresa, não o contrário. Faço o levantamento, customizo o que precisa, migro os dados e fico junto no go live. Já mexi em Financeiro, Suprimentos, Mercado, LSP, BPM, eDocs e WMS.</p>
         <div class="chips"><span class="chip">Financeiro</span><span class="chip">Suprimentos</span><span class="chip">Mercado</span><span class="chip">LSP</span><span class="chip">BPM</span><span class="chip">eDocs</span><span class="chip">WMS</span><span class="chip">WebServices</span><span class="chip">Analytics Senior X</span><span class="chip">Switch X</span><span class="chip">Migração de Dados</span><span class="chip">Go Live</span></div>
       </div>
       <div class="exp reveal">
         <div class="badge">BI</div>
         <h3>Business Intelligence</h3>
-        <p>Dashboard bonito não decide nada; dashboard certo, sim. Modelo os dados, escolho os indicadores que importam e transformo números soltos em visualização clara: meta, desempenho, ranking e o próximo passo — do operacional à diretoria.</p>
+        <p>Monto o ambiente de BI da origem ao painel. Modelo os dados, defino as métricas com quem vai usar e entrego um dashboard que responde à pergunta certa. E que a pessoa reabre na semana seguinte porque confia no número.</p>
         <div class="chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query</span><span class="chip">Modelagem Dimensional</span><span class="chip">KPIs</span><span class="chip">Dashboards Executivos</span><span class="chip">Metas</span><span class="chip">Storytelling</span></div>
       </div>
       <div class="exp reveal">
         <div class="badge">{ }</div>
         <h3>Engenharia de Dados</h3>
-        <p>Dado confiável é dado que chega sozinho, tratado e no lugar certo. Construo os bastidores — extração de ERPs e APIs, ETL em Python, bancos de dados e Data Warehouses — para sustentar toda a análise sem depender de exportação manual nem de planilha perdida.</p>
+        <p>Cuido dos bastidores: puxar dado de ERP e de API, tratar em Python, guardar em banco e deixar tudo atualizando sozinho. É a parte que ninguém vê, mas é o que faz o painel abrir de manhã com o número certo, sem ninguém exportar planilha.</p>
         <div class="chips"><span class="chip">Python</span><span class="chip">ETL</span><span class="chip">Data Warehouse</span><span class="chip">Oracle</span><span class="chip">PostgreSQL</span><span class="chip">SQL Server</span><span class="chip">MySQL</span><span class="chip">REST</span><span class="chip">SOAP</span><span class="chip">APIs</span></div>
       </div>
       <div class="exp reveal">
         <div class="badge">✓</div>
         <h3>Consultoria e Gestão</h3>
-        <p>Traduzo a necessidade do negócio na solução técnica certa — e fico até virar rotina que a equipe realmente usa. Requisito, POC, entrega, treinamento e evolução, sempre medindo pelo resultado e não pela entrega do arquivo.</p>
+        <p>Entro entendendo o problema do negócio antes de abrir qualquer ferramenta. Levanto requisito, faço uma POC quando faz sentido, entrego, treino o time e continuo por perto. Prefiro entregar algo que a equipe usa a um arquivo bonito que ninguém abre.</p>
         <div class="chips"><span class="chip">Gestão de Projetos</span><span class="chip">Levantamento de Requisitos</span><span class="chip">POCs</span><span class="chip">Treinamentos</span><span class="chip">Key Users</span><span class="chip">Documentação</span><span class="chip">Liderança Técnica</span></div>
       </div>
     </div>
@@ -317,8 +379,8 @@
     <div class="band-inner">
       <div class="band-copy reveal">
         <div class="kicker"><span class="dot"></span>Em ação · Inova Contestado</div>
-        <h2>O número não fala sozinho.<br><em>Eu traduzo.</em></h2>
-        <p>Apresentando soluções de BI e dados no Inova Contestado — mostrando como um problema de negócio vira painel, indicador e decisão que a equipe usa.</p>
+        <h2>Metade do trabalho é <em>conversar</em>.</h2>
+        <p>Entender o problema com quem vive ele, e depois explicar o que o dado mostra pra quem vai decidir. Muita coisa se resolve aí, antes de qualquer dashboard. Na foto, apresentando soluções de dados no Inova Contestado.</p>
       </div>
     </div>
   </section>
@@ -418,8 +480,8 @@
 <div class="wrap">
   <section id="contact" class="contact">
     <div class="eyebrow reveal" style="justify-content:center">Vamos conversar</div>
-    <h2 class="reveal">Tecnologia que entende o negócio.</h2>
-    <p class="sec-lead reveal">Dado espalhado, processo manual, painel que ninguém confia? Costuma ser exatamente o tipo de coisa que eu resolvo — em ERP Senior, BI e engenharia de dados. Vamos conversar.</p>
+    <h2 class="reveal">Entendo o seu negócio antes da ferramenta.</h2>
+    <p class="sec-lead reveal">Se você se reconheceu em algum problema aqui de cima, provavelmente é comigo. ERP Senior, BI e engenharia de dados. Me chama.</p>
     <div class="contact-cards">
       <a class="cc reveal" href="mailto:3runo.rds@gmail.com"><div class="k">E-mail</div><div class="v">3runo.rds@gmail.com</div></a>
       <a class="cc reveal" href="https://wa.me/5549988630289" target="_blank" rel="noopener"><div class="k">WhatsApp</div><div class="v">(49) 98863-0289</div></a>
